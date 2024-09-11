@@ -1,4 +1,4 @@
-#Actividad 1. Juego Pintando
+# Actividad 1. Juego Pintando
 
 ## Descripción
 
