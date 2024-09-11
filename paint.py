@@ -10,9 +10,8 @@ Exercises
 """
 
 from turtle import *
-
 from freegames import vector
-
+import math
 
 def line(start, end):
     """Draw line from start to end."""
@@ -40,7 +39,6 @@ def circunference(start, end):
     """Draw circle from start to end."""
     up()
     goto(start.x, end.y)
-
     down()
     circle(120, 360)
 
@@ -61,15 +59,19 @@ def rectangle(start, end):
     end_fill()
 
 def triangle(start, end):
-    """Draw triangle from start to end
+    """Draw triangle from start to end """
     up()
     goto(start.x, end.y)
-
     down()
-    for count in range(3):
-        forward(end.x - start.x)
-        left() """
-    pass  # TODO
+    begin_fill()
+
+    forward(end.x - start.x)
+    left(90)
+    forward(end.x - start.x)
+    left(135)
+    forward(math.sqrt( 2* pow(end.x - start.x, 2)))
+
+    end_fill()
 
 
 def tap(x, y):
